@@ -14,17 +14,18 @@ The code is under development.
 
 Foghub is a Sinatra application that can receive, and parse, the data given by Github's service hooks.
 
-Clone this repository, and edit `config.yml` to include your Fogbugz credentials.
+Clone this repository, and edit `config.yml` to include your Fogbugz credentials, as well as a secret token that Github will use to authenticate itself.
 
 Commit your configuration file and deploy Foghub on e.g. Heroku. 
 
-Set your Github repository's post-recieve URL service hook to:
+Point your Github project's post-recieve URL service hook to:
 
     <domain>/commit/<token>
+    http://foghub.heroku.com/commit/29813y4y1h84h18n418231238191hmn9dj # example
 
 Where `<token>` is the token specified in `config.yml`.
 
-Each time a commit hits your Github repo, Foghub should take care of getting your commits into Fogbugz:
+Each time a commit hits your Github repo, Foghub should take care of getting your new commits into Fogbugz:
 
 ![Diagram](http://i.imgur.com/10TKS.png)
 
