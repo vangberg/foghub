@@ -24,7 +24,7 @@ Where `<token>` is the token specified in `config.yml`.
 
 Each time a commit hits your Github repo, Foghub should take care of getting your commits into Fogbugz:
 
-    ![Diagram](http://i.imgur.com/10TKS.png)
+![Diagram](http://i.imgur.com/10TKS.png)
 
 # Feature plans
 
